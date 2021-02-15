@@ -1,0 +1,362 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  src: local("Nunito-Bold"), url("/fonts/Nunito-Bold.woff2") format("woff2"), url("/fonts/Nunito-Bold.woff") format("woff"), url("/fonts/Nunito-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: lighter;
+  src: local("Nunito-Light"), url("/fonts/Nunito-Light.woff2") format("woff2"), url("/fonts/Nunito-Light.woff") format("woff"), url("/fonts/Nunito-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Nunito-Regular"), url("/fonts/Nunito-Regular.woff2") format("woff2"), url("/fonts/Nunito-Regular.woff") format("woff"), url("/fonts/Nunito-Regular.ttf") format("ttf");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #017862;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1540px;
+}
+
+h1,
+h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #126a4f;
+  margin: 0;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+section {
+  padding: 50px 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 2000px;
+  padding: 5px 10px;
+  background-color: grey;
+}
+
+.header__logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-descr {
+  width: 150px;
+  padding-left: 10px;
+  color: #017862;
+  font-size: 13px;
+}
+
+/* .header__logo-img {
+} */
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 13px;
+}
+
+.header__tel,
+.header__mail {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__mail {
+  margin-top: 5px;
+}
+
+/*/////////////////////////////////////////////////////////*/
+
+.menu a.parent {
+  margin: 0px 30px 0px 0px;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list > li {
+  margin: 0px 30px 0px 0px;
+}
+
+.menu__link {
+  color: #fff;
+}
+
+.sub-menu__list {
+  display: none;
+  min-width: 300px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding: 20px 0px 0px 0px;
+}
+
+.sub-menu__list > li {
+  background-color: #fff;
+}
+
+.sub-menu__link {
+  color: #000;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.arrow.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.sub-menu__arrow.arrow {
+  right: 10px;
+  border-left: 10px solid #000;
+  border-right: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+body.mouse .menu__list > li:hover .sub-menu__list {
+  display: block;
+}
+
+body.touch .sub-menu__list.open {
+  display: block;
+}
+
+body.touch .arrow {
+  display: block;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  h1,
+  h2 {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1,
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 30px;
+    height: 20px;
+  }
+
+  .burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger:before,
+  .burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger:before {
+    top: 0;
+  }
+
+  .burger:after {
+    bottom: 0;
+  }
+
+  .burger.active-burger:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .burger.active-burger:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .burger.active-burger span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #bdbdbd;
+    padding: 50px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+
+  .menu.active-burger {
+    top: 0;
+  }
+
+  .list {
+    display: block;
+  }
+
+  .menu__list {
+    display: block;
+  }
+
+  .menu__list > li {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .sub-menu__list {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .sub-sub-menu__list {
+    padding: 0px 5px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .sub-menu__arrow.arrow {
+    right: 10px;
+    top: 15px;
+    border-bottom: none;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #000;
+    border-right: 10px solid transparent;
+  }
+}
